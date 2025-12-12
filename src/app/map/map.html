@@ -1,0 +1,13 @@
+<section class="map-section">
+  <div id="map"></div>
+  <div class="measurement-panel">
+    <h1>{{ stationTitle }}</h1>
+    <div class="measurement-content">
+      <div *ngFor="let m of measurements">
+       <strong>{{ m.displayName }} </strong>:  <!-- ({{ m.parameter }}) -->
+        {{ m.value }} {{ m.unit }}
+      </div>
+    </div>
+</div>
+</section>
+
