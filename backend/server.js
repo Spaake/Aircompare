@@ -1,5 +1,5 @@
 import express from "express";
-import fetch from "node-fetch";
+// import fetch from "node-fetch";
 import cors from "cors";
 import mysql from "mysql2/promise";
 
@@ -393,6 +393,11 @@ app.get("/api/wind", async(req, res) =>{
   }
 
 })
-app.listen(PORT, () => {
-  console.log(`Proxy works on http://localhost:${PORT}`);
-});
+
+export default app;
+
+if (process.env.NODE_ENV !== "test") {
+  app.listen(PORT, () => {
+    console.log(`Proxy works on http://localhost:${PORT}`);
+  });
+}
