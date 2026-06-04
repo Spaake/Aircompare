@@ -1,5 +1,6 @@
 import request from "supertest";
 import app from "../server.js";
+import {jest, beforeEach, test, expect, describe} from "@jest/globals";
 
 describe("GET /api/wind", () => {
 
