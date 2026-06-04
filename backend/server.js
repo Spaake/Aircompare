@@ -1,5 +1,5 @@
 import express from "express";
-import fetch from "node-fetch";
+// import fetch from "node-fetch";
 import cors from "cors";
 import mysql from "mysql2/promise";
 
